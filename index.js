@@ -60,5 +60,21 @@ function trandingProductHandle(allProduct) {
         trandingProductContainer.appendChild(card)
     });
 }
- 
-product() 
+
+product()
+
+// dom manipulation for menu
+const menuItem = document.getElementById("menu-item");
+const btnMenu = document.getElementById("btn-menu");
+let menuOn = true;
+btnMenu.addEventListener("click", () => {
+    if (menuOn) {
+        menuItem.classList.add("top-16")
+        btnMenu.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+        menuOn = false;
+    }else {
+        menuItem.classList.remove("top-16")
+        btnMenu.innerHTML = `<i class="fa-solid fa-bars"></i>`
+        menuOn = true;
+    }
+})

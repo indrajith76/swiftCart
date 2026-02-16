@@ -12,24 +12,36 @@
 
 <body>
     <header>
-        <nav class="flex items-center justify-between container mx-auto py-4 max-w-5xl">
+        <nav class="flex items-center justify-between container mx-auto py-4 px-5 lg:px-0 max-w-5xl">
             <a class="text-2xl font1st text-orange-600 font-bold" href="">SwiftCart</a>
-            <ul class="flex items-center gap-5">
-                <li><a class="text-orange-600 bg-orange-600/10 py-1 px-2 rounded-lg font-semibold" href="/index.html">Home</a></li>
+            <ul class="hidden lg:flex items-center gap-5">
+                <li><a class="text-orange-600 bg-orange-600/10 py-1 px-2 rounded-lg font-semibold"
+                        href="/index.html">Home</a></li>
                 <li><a class="text-gray-700 font-semibold" href="/pages/products.html">Product</a></li>
                 <li><a class="text-gray-700 font-semibold" href="">About</a></li>
                 <li><a class="text-gray-700 font-semibold" href="">Contact</a></li>
             </ul>
-            <button
-                class="relative cursor-pointer flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-md hover:shadow-lg transition">
-                <span
-                    class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full">
-                    0
-                </span>
-                <i class="fa-solid fa-cart-plus text-gray-700 text-lg"></i>
-            </button>
+            <div class="flex gap-5">
+                <button
+                    class="relative cursor-pointer flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-sm hover:shadow-md transition">
+                    <span
+                        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full">
+                        0
+                    </span>
+                    <i class="fa-solid fa-cart-plus text-gray-700 text-lg"></i>
+                </button>
 
-
+                <button id="btn-menu" class="cursor-pointer block lg:hidden">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <!-- medium screen devices -->
+            <ul id="menu-item" class="bg-white shadow-lg p-4 flex flex-col gap-2 rounded-lg absolute -top-[350px] right-5 transition-all">
+                <li><a class="text-orange-600 font-semibold" href="/index.html">Home</a></li>
+                <li><a class="text-gray-700 font-semibold" href="/pages/products.html">Product</a></li>
+                <li><a class="text-gray-700 font-semibold" href="">About</a></li>
+                <li><a class="text-gray-700 font-semibold" href="">Contact</a></li>
+            </ul>
         </nav>
 
         <div class="heroBg flex items-center text-left">
@@ -42,16 +54,17 @@
                     Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at
                     SwiftCart.
                 </p>
-
-                <button
-                    class="bg-orange-600 hover:bg-orange-500 text-white px-6 py-3 rounded-full  transition cursor-pointer">
-                    Shop Now
-                </button>
+                <div>
+                    <button
+                        class="bg-orange-600 hover:bg-orange-500 text-white px-6 py-3 rounded-full  transition cursor-pointer">
+                        Shop Now
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="py-20 bg-orange-50/50 border-b border-gray-300">
+    <section class="py-20 px-5 lg:px-0 bg-orange-50/50 border-b border-gray-300">
         <div class="container mx-auto">
             <h2 class="text-3xl font2nd font-semibold text-center text-gray-800">Why Choose Us</h2>
             <p class="mt-3 mb-24 text-lg text-center text-gray-600">We provide the best shopping experience with
@@ -59,7 +72,7 @@
                 services.</p>
 
             <!-- cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-9 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-9 max-w-5xl mx-auto">
                 <div class="bg-white p-6 rounded-xl drop-shadow-sm relative">
                     <div
                         class="absolute -top-7 w-12 h-12 mb-4 flex items-center justify-center bg-orange-600/10 text-orange-600 rounded-lg border-4 border-white drop-shadow-sm    ">
@@ -110,15 +123,15 @@
         </div>
     </section>
 
-    <section class="py-16 container mx-auto max-w-5xl">
+    <section class="py-16  px-5 lg:px-0 container mx-auto max-w-5xl">
         <h2 class="text-3xl font2nd font-semibold text-left text-gray-800">Tranding Now</h2>
 
-        <div id="trandingProduct-container" class="grid grid-cols-3 gap-5 mt-8">
+        <div id="trandingProduct-container" class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-8">
 
         </div>
     </section>
 
-    <footer class="bg-[#1f2937]">
+    <footer class="bg-[#1f2937] px-5 lg:px-0">
         <div class=" text-gray-300 pt-16 pb-8 max-w-5xl mx-auto">
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
 
