@@ -31,14 +31,14 @@ const categoryDisplayHandler = (categories) => {
     categoryList.innerHTML = "";
     const allProductBtn = document.createElement("li");
     allProductBtn.innerHTML = `
-    <button onclick="product()" class="cursor-pointer w-full px-3 py-1 text-white transition bg-orange-600 rounded-3xl hover:bg-orange-700 capitalize">all</button>
+    <button onclick="product()" class="cursor-pointer w-full px-3 py-1 text-white transition bg-orange-600 rounded-3xl hover:bg-orange-700 capitalize categoriesBtn">all</button>
     `;
     categoryList.append(allProductBtn)
 
     categories.map(c => {
         const li = document.createElement("li");
         li.innerHTML = `
-        <button onclick="categoryHandler(${"`" + c + "`"})" class="cursor-pointer w-full px-3 py-1 text-gray-800 hover:text-white font-medium transition bg-white border border-gray-300 rounded-3xl hover:bg-orange-600 capitalize">${c}</button>
+        <button onclick="categoryHandler(${"`" + c + "`"})" class="cursor-pointer w-full px-3 py-1 text-gray-800 hover:text-white font-medium transition bg-white border border-gray-300 rounded-3xl hover:bg-orange-600 capitalize categoriesBtn">${c}</button>
         `;
         categoryList.append(li);
     });
@@ -140,6 +140,7 @@ function closeModal() {
     productDetailsModal.classList.add("hidden");
     document.body.classList.remove("overflow-hidden");
 }
+ 
 
 
 category()
